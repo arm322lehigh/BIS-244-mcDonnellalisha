@@ -53,15 +53,17 @@ for (i in 1:n) {
 }
 View(midterm.r)
 
-
+#replacing all the values of 1 and -3.855114 to get rid of the ugly lines on the graph
 for (i in 1:n) {
-  if(midterm.r$above_cases[i]==1) {
-    midterm.r$above_cases[i] <- NA
+  if(SNOHOMISH$above_cases[i]==1) {
+    SNOHOMISH$above_cases[i] <- NA
   } else {}
-  if(midterm.r$below_cases[i]==1) {
-    midterm.r$below_cases[i] <- NA
+  if(SNOHOMISH$below_cases[i]==-3.855114) {
+    SNOHOMISH$below_cases[i] <- NA
   } else {}
 }
+
+
 
 # Plotting
 
